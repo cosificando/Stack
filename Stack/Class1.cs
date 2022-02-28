@@ -5,26 +5,28 @@ namespace Stack
     public class Stack
     {
         public Stack() {
-            this.empty = true;
+            this.size = 0;
         }
         
         #region private attributes
-        private bool empty;
+        private int size;
         #endregion
-        public int Size { get { return 2; } }
+        public int Size { get { return size; } }
         public bool? IsEmpty()
         {
-            return this.empty;
+            return this.size == 0;
         }
 
         public void Push(int v)
         {
-            this.empty = false;
+            this.size++;
+            
         }
 
         public void Pop()
         {
-            this.empty = true;
+            --this.size;
+           
         }
     }
 }

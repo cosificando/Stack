@@ -33,6 +33,7 @@ namespace Stack.Test
             stack.Push(0);
             stack.Pop();
 
+            Assert.AreEqual(0,stack.Size);
             Assert.IsTrue(stack.IsEmpty());
         }
 
@@ -44,5 +45,7 @@ namespace Stack.Test
 
             Assert.AreEqual(2, stack.Size);
         }
+
+        
     }
 }
