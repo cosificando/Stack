@@ -26,5 +26,14 @@ namespace Stack.Test
 
             Assert.IsFalse(stack.IsEmpty());
         }
+
+        [Test]
+        public void afterOnePushAndPop_isEmpty()
+        {
+            stack.Push(0);
+            stack.Pop();
+
+            Assert.IsTrue(stack.IsEmpty());
+        }
     }
 }

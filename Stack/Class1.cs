@@ -20,5 +20,10 @@ namespace Stack
         {
             this.empty = false;
         }
+
+        public void Pop()
+        {
+            this.empty = true;
+        }
     }
 }
