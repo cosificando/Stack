@@ -23,10 +23,15 @@ namespace Stack
             
         }
 
-        public void Pop()
+        public int Pop()
         {
-            --this.size;
-           
+            if (size == 0)
+                throw new UnderflowException();
+            else
+            {
+                --this.size;
+                return 69;
+            }
         }
     }
 }

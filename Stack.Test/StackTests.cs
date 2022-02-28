@@ -2,6 +2,7 @@ using NUnit.Framework;
 
 namespace Stack.Test
 {
+    [TestFixture]
     public class StackTests
     {
         #region private attributes
@@ -47,9 +48,21 @@ namespace Stack.Test
         }
 
         [Test]
+        // [ExpectedException(typeof(UnderflowException))] // Para MSTests & NUnit 2+
         public void popInEmptyStack_throwsUnderflowException()
         {
-            Assert.Fail("Aún no implementada");
+            stack.Pop();
+        }
+
+        [Test]
+        public void AfterPushingX_WillPopX()
+        {
+            stack.Push(69);
+
+            Assert.AreEqual(69, stack.Pop());
+
+            stack.Push(70);
+            Assert.AreEqual(70, stack.Pop());
         }
     }
 }
