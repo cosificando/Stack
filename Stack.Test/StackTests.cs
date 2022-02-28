@@ -23,6 +23,8 @@ namespace Stack.Test
             Stack stack = new Stack();
 
             stack.Push(0);
+
+            Assert.IsFalse(stack.IsEmpty());
         }
     }
 }
