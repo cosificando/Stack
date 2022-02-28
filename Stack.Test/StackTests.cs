@@ -15,7 +15,14 @@ namespace Stack.Test
             Stack stack = new Stack();
 
             Assert.IsTrue(stack.IsEmpty());
-           
+        }
+
+        [Test]
+        public void CanPush()
+        {
+            Stack stack = new Stack();
+
+            stack.Push(0);
         }
     }
 }

@@ -8,5 +8,10 @@ namespace Stack
         {
             return true;
         }
+
+        public void Push(int v)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
