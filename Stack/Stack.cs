@@ -5,12 +5,13 @@ namespace Stack
     public class Stack
     {
         public Stack() {
+            this.elements = new int[2];
             this.size = 0;
         }
-        
+
         #region private attributes
         private int size;
-        private int element;
+        private int[] elements;
         #endregion
         public int Size { get { return size; } }
         public bool? IsEmpty()
@@ -20,20 +21,15 @@ namespace Stack
 
         public void Push(int element)
         {
-            this.size++;
-            this.element = element;
-            
+            this.elements[this.size++] = element;
         }
 
         public int Pop()
         {
             if (size == 0)
                 throw new UnderflowException();
-            else
-            {
-                --this.size;
-                return this.element;
-            }
+
+            return this.elements[--size];
         }
     }
 }

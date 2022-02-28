@@ -67,7 +67,10 @@ namespace Stack.Test
         [Test]
         public void AfterPushingXAndY_WillPopYThenX()
         {
-            Assert.Fail("Not implemented yet");
+            stack.Push(69);
+            stack.Push(70);
+            Assert.AreEqual(70, stack.Pop());
+            Assert.AreEqual(69, stack.Pop());
         }
     }
 }
