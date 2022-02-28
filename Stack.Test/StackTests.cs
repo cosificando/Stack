@@ -58,11 +58,16 @@ namespace Stack.Test
         public void AfterPushingX_WillPopX()
         {
             stack.Push(69);
-
             Assert.AreEqual(69, stack.Pop());
 
             stack.Push(70);
             Assert.AreEqual(70, stack.Pop());
+        }
+
+        [Test]
+        public void AfterPushingXAndY_WillPopYThenX()
+        {
+            Assert.Fail("Not implemented yet");
         }
     }
 }
