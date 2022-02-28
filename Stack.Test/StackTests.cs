@@ -35,5 +35,14 @@ namespace Stack.Test
 
             Assert.IsTrue(stack.IsEmpty());
         }
+
+        [Test]
+        public void afterTwoPushes_sizeIsTwo()
+        {
+            stack.Push(0);
+            stack.Push(0);
+
+            Assert.Equals(2, stack.Size);
+        }
     }
 }

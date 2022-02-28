@@ -10,6 +10,8 @@ namespace Stack
         
         #region private attributes
         private bool empty;
+
+        public  int Size { get { return 2; } }
         #endregion
         public bool? IsEmpty()
         {
