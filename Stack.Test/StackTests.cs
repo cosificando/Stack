@@ -42,7 +42,7 @@ namespace Stack.Test
             stack.Push(0);
             stack.Push(0);
 
-            Assert.Equals(2, stack.Size);
+            Assert.AreEqual(2, stack.Size);
         }
     }
 }
