@@ -4,24 +4,24 @@ namespace Stack.Test
 {
     public class StackTests
     {
+        #region private attributes
+        Stack stack;
+        #endregion
         [SetUp]
         public void Setup()
         {
+            this.stack = new Stack();
         }
 
         [Test]
         public void CanCreateStack()
         {
-            Stack stack = new Stack();
-
             Assert.IsTrue(stack.IsEmpty());
         }
 
         [Test]
-        public void CanPush()
+        public void afterOnePush_isNotEmpty()
         {
-            Stack stack = new Stack();
-
             stack.Push(0);
 
             Assert.IsFalse(stack.IsEmpty());
