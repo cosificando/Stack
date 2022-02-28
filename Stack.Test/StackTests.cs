@@ -46,6 +46,10 @@ namespace Stack.Test
             Assert.AreEqual(2, stack.Size);
         }
 
-        
+        [Test]
+        public void popInEmptyStack_throwsUnderflowException()
+        {
+            Assert.Fail("Aún no implementada");
+        }
     }
 }
